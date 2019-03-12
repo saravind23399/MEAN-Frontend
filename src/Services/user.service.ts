@@ -20,7 +20,7 @@ export class UserService {
     const body = { email_id: email_id, password: password };
     const headers = new Headers();
     headers.append('Content-Type', 'application/json');
-    return this.http.post(this.getUrl('users/newParticipant'), body).pipe(map(res => res, { 'headers': headers }));
+    return this.http.post(this.getUrl('users/createUser'), body).pipe(map(res => res, { 'headers': headers }));
   }
 
   getAllParticipants() {
